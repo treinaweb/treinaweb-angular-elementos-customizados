@@ -6,12 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
-  isVisible = true;
+  title = '123';
 
   constructor(){
-    setTimeout(() => {
-      this.isVisible = false;
-    }, 1000);
   }
 }
