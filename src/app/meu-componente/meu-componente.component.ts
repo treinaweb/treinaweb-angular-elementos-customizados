@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-meu-componente',
@@ -6,13 +7,17 @@ import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
   styleUrls: ['./meu-componente.component.css']
 })
 export class MeuComponenteComponent implements OnInit {
-  nome = 'Treinaweb';
-  @ViewChild('meuElemento') myElement: ElementRef;
+  myStyle = '';
 
-  constructor() { }
+  get mySafeStyle(){
+    return  this.sanitizer.bypassSecurityTrustStyle(this.myStyle);
+  }
+
+  constructor(
+    private sanitizer: DomSanitizer
+  ) { }
 
   ngOnInit() {
-    console.log(this.myElement);
   }
 
 }
