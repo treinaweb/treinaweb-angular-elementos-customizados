@@ -9,9 +9,7 @@ export class AppComponent {
   title = '123';
 
   constructor(){
+    
   }
 
-  handleClick(event){
-    console.log(event);
-  }
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-meu-componente',
@@ -6,17 +6,13 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./meu-componente.component.css']
 })
 export class MeuComponenteComponent implements OnInit {
-  @Input() nome;
-  @Output() nomeChange = new EventEmitter();
+  nome = 'Treinaweb';
+  @ViewChild('meuElemento') myElement: ElementRef;
 
   constructor() { }
 
   ngOnInit() {
-    
-  }
-
-  onChangeName(){
-    this.nomeChange.emit(this.nome);
+    console.log(this.myElement);
   }
 
 }
