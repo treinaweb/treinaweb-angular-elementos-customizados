@@ -10,4 +10,8 @@ export class AppComponent {
 
   constructor(){
   }
+
+  handleClick(event){
+    console.log(event);
+  }
 }
