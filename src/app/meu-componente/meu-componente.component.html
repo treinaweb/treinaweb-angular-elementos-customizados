@@ -1,5 +1,5 @@
 <p>
-  {{ nome }} - {{ nomeExterno }}
+  {{ nome }} 
 </p>
 
-<button (click)="callClick()" >Clique Aqui</button>
+<input type="text" [(ngModel)]="nome" (input)="onChangeName()" >

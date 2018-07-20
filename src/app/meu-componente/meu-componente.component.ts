@@ -6,10 +6,8 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./meu-componente.component.css']
 })
 export class MeuComponenteComponent implements OnInit {
-  nome = 'Treinaweb';
-  @Input() nomeExterno;
-  @Output() myClick = new EventEmitter();
-
+  @Input() nome;
+  @Output() nomeChange = new EventEmitter();
 
   constructor() { }
 
@@ -17,8 +15,8 @@ export class MeuComponenteComponent implements OnInit {
     
   }
 
-  callClick(){
-    this.myClick.emit(123);
+  onChangeName(){
+    this.nomeChange.emit(this.nome);
   }
 
 }
