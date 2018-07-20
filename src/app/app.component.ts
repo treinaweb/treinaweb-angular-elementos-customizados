@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  isVisible = true;
+
+  constructor(){
+    setTimeout(() => {
+      this.isVisible = false;
+    }, 1000);
+  }
 }
