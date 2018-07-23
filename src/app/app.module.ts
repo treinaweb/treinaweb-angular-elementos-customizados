@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { MeuComponenteComponent } from './meu-componente/meu-componente.component';
 import { AlteraCorDirective } from './altera-cor.directive';
 import { NgUnlessDirective } from './ng-unless.directive';
+import { ReversePipe } from './reverse.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     MeuComponenteComponent,
     AlteraCorDirective,
-    NgUnlessDirective
+    NgUnlessDirective,
+    ReversePipe
   ],
   imports: [
     BrowserModule,
