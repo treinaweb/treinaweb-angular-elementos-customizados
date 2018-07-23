@@ -5,13 +5,10 @@
 </select>
   
 <div 
-
-    [ngClass]="{
-        classe1: (minhaClasse.value == 1),
-        classe2: (minhaClasse.value == 2),
-        classe3: (minhaClasse.value == 3),
-        classeMaior1: (minhaClasse.value > 1)
+    [ngStyle]="{
+        color: (minhaClasse.value == 2 ? 'red' : 'black')
     }"
+
    >
    Minha Classe
 </div>
