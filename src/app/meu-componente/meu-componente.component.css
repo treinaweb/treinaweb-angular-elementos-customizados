@@ -1,3 +1,5 @@
-h1{
+:host{
     color: red;
+    border: 1px solid blue;
+    display: inline-block;
 }
