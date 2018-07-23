@@ -1,15 +1,10 @@
-<select (change)="0" #minhaClasse >
+<select (change)="0" #minhaClasse appAlteraCor >
     <option value="1" >Classe 1</option>
     <option value="2" >Classe 2</option>
     <option value="3" >Classe 3</option>
 </select>
   
-<div 
-    [ngStyle]="{
-        color: (minhaClasse.value == 2 ? 'red' : 'black')
-    }"
-
-   >
+<div appAlteraCor >
    Minha Classe
 </div>
   
