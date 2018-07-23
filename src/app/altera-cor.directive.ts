@@ -1,4 +1,4 @@
-import { Directive, ElementRef, Renderer2 } from '@angular/core';
+import { Directive, ElementRef, Renderer2, HostListener } from '@angular/core';
 
 @Directive({
   selector: '[appAlteraCor]'
@@ -22,6 +22,10 @@ export class AlteraCorDirective {
       'background-color',
       color
     );
+  }
+
+  @HostListener('click') meuClique(){
+    alert('Olá');
   }
 
 }
