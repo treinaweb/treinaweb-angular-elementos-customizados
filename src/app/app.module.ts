@@ -1,24 +1,22 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
-import { MeuComponenteComponent } from './meu-componente/meu-componente.component';
-import { AlteraCorDirective } from './altera-cor.directive';
-import { NgUnlessDirective } from './ng-unless.directive';
-import { ReversePipe } from './reverse.pipe';
+import { ListComponent } from './views/list/list.component';
+import { ListItemComponent } from './components/list-item/list-item.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MeuComponenteComponent,
-    AlteraCorDirective,
-    NgUnlessDirective,
-    ReversePipe
+    ListComponent,
+    ListItemComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
